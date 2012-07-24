@@ -29,6 +29,6 @@ interface BackendInterface
     
     public function getBank($bankID);
     public function bankExists($bankID);
-    public function getAllBanks();
+    public function getAllBanks();    
     
 }

@@ -1,8 +1,565 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="Bav\BavTest" file="/home/dl/Projects/bav/tests/library/Bav/BavTest.php" namespace="Bav" fullPackage="Bav" tests="3" assertions="5" failures="0" errors="0" time="0.077796">
-    <testcase name="testGetBackendForUnknownCountryThrowsException" class="Bav\BavTest" file="/home/dl/Projects/bav/tests/library/Bav/BavTest.php" line="40" assertions="1" time="0.003554"/>
-    <testcase name="testGetBank" class="Bav\BavTest" file="/home/dl/Projects/bav/tests/library/Bav/BavTest.php" line="46" assertions="2" time="0.029717"/>
-    <testcase name="testBankExists" class="Bav\BavTest" file="/home/dl/Projects/bav/tests/library/Bav/BavTest.php" line="58" assertions="2" time="0.044525"/>
+  <testsuite name="Bav Library Test Suite" tests="268" assertions="701" failures="2" errors="1" time="1.664890">
+    <testsuite name="Bav\Backend\BundesbankFileTest" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Backend/BundesbankFileTest.php" namespace="Bav\Backend" fullPackage="Bav.Backend" tests="1" assertions="3" failures="0" errors="0" time="0.022755">
+      <testcase name="testGetBank" class="Bav\Backend\BundesbankFileTest" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Backend/BundesbankFileTest.php" line="37" assertions="3" time="0.022755"/>
+    </testsuite>
+    <testsuite name="Bav\Backend\BundesbankMongoTest" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Backend/BundesbankMongoTest.php" namespace="Bav\Backend" fullPackage="Bav.Backend" tests="1" assertions="0" failures="0" errors="1" time="0.003286">
+      <testcase name="testGetBank" class="Bav\Backend\BundesbankMongoTest" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Backend/BundesbankMongoTest.php" line="36" assertions="0" time="0.003286">
+        <error type="PHPUnit_Framework_Error_Notice">Bav\Backend\BundesbankMongoTest::testGetBank
+Undefined variable: dbname
+
+/Users/steffen/www_root/tmp_github/bav/library/Bav/Backend/BundesbankMongo.php:42
+/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Backend/BundesbankMongoTest.php:24
+/usr/bin/phpunit:46
+</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="Bav\BavTest" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/BavTest.php" namespace="Bav" fullPackage="Bav" tests="3" assertions="5" failures="0" errors="0" time="0.064082">
+      <testcase name="testGetBackendForUnknownCountryThrowsException" class="Bav\BavTest" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/BavTest.php" line="40" assertions="1" time="0.002609"/>
+      <testcase name="testGetBank" class="Bav\BavTest" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/BavTest.php" line="46" assertions="2" time="0.016648"/>
+      <testcase name="testBankExists" class="Bav\BavTest" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/BavTest.php" line="58" assertions="2" time="0.044825"/>
+    </testsuite>
+    <testsuite name="Bav\Encoder\Iso8859Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Encoder/Iso8859Test.php" namespace="Bav\Encoder" fullPackage="Bav.Encoder" tests="2" assertions="19" failures="0" errors="0" time="0.005350">
+      <testcase name="testIsSupportedForIso8859From1to15ReturnsTrue" class="Bav\Encoder\Iso8859Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Encoder/Iso8859Test.php" line="35" assertions="15" time="0.003843"/>
+      <testcase name="testIsSupportedForNonIso8859ReturnsFalse" class="Bav\Encoder\Iso8859Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Encoder/Iso8859Test.php" line="42" assertions="4" time="0.001507"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System00Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System00Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="8" failures="0" errors="0" time="0.014228">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System00Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System00Test.php" line="12" assertions="4" time="0.007473"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System00Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System00Test.php" line="22" assertions="4" time="0.006755"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System01Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System01Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="8" failures="0" errors="0" time="0.010827">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System01Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System01Test.php" line="12" assertions="4" time="0.005375"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System01Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System01Test.php" line="22" assertions="4" time="0.005452"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System02Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System02Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="8" failures="0" errors="0" time="0.011708">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System02Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System02Test.php" line="12" assertions="4" time="0.006231"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System02Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System02Test.php" line="22" assertions="4" time="0.005477"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System03Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System03Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="8" failures="0" errors="0" time="0.011427">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System03Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System03Test.php" line="12" assertions="4" time="0.005974"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System03Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System03Test.php" line="22" assertions="4" time="0.005453"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System04Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System04Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="8" failures="0" errors="0" time="0.011767">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System04Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System04Test.php" line="12" assertions="4" time="0.006222"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System04Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System04Test.php" line="22" assertions="4" time="0.005545"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System05Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System05Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="8" failures="0" errors="0" time="0.011648">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System05Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System05Test.php" line="12" assertions="4" time="0.006192"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System05Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System05Test.php" line="22" assertions="4" time="0.005456"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System06Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System06Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.006140">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System06Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System06Test.php" line="12" assertions="2" time="0.003061"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System06Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System06Test.php" line="22" assertions="2" time="0.003079"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System07Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System07Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.006961">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System07Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System07Test.php" line="12" assertions="2" time="0.003796"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System07Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System07Test.php" line="22" assertions="2" time="0.003165"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System08Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System08Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="5" failures="0" errors="0" time="0.010019">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System08Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System08Test.php" line="12" assertions="2" time="0.004491"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System08Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System08Test.php" line="22" assertions="3" time="0.005528"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System09Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System09Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="1" assertions="5" failures="0" errors="0" time="0.003280">
+      <testcase name="testWithAccountReturnsTrue" class="Bav\Validator\De\System09Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System09Test.php" line="12" assertions="5" time="0.003280"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System10Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System10Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.007025">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System10Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System10Test.php" line="12" assertions="2" time="0.003817"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System10Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System10Test.php" line="22" assertions="2" time="0.003208"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System11Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System11Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.007101">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System11Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System11Test.php" line="12" assertions="2" time="0.003871"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System11Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System11Test.php" line="22" assertions="2" time="0.003230"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System13Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System13Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="5" failures="0" errors="0" time="0.009768">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System13Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System13Test.php" line="12" assertions="3" time="0.005343"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System13Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System13Test.php" line="22" assertions="2" time="0.004425"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System16Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System16Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.007469">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System16Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System16Test.php" line="12" assertions="2" time="0.004015"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System16Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System16Test.php" line="22" assertions="2" time="0.003454"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System17Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System17Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="3" failures="0" errors="0" time="0.006065">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System17Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System17Test.php" line="12" assertions="1" time="0.002773"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System17Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System17Test.php" line="22" assertions="2" time="0.003292"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System18Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System18Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.007321">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System18Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System18Test.php" line="12" assertions="2" time="0.004057"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System18Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System18Test.php" line="22" assertions="2" time="0.003264"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System19Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System19Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.007071">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System19Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System19Test.php" line="12" assertions="2" time="0.003797"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System19Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System19Test.php" line="22" assertions="2" time="0.003274"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System20Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System20Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.007178">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System20Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System20Test.php" line="12" assertions="2" time="0.003915"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System20Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System20Test.php" line="22" assertions="2" time="0.003263"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System21Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System21Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.008739">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System21Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System21Test.php" line="12" assertions="2" time="0.004659"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System21Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System21Test.php" line="22" assertions="2" time="0.004080"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System22Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System22Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.007205">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System22Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System22Test.php" line="12" assertions="2" time="0.003932"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System22Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System22Test.php" line="22" assertions="2" time="0.003273"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System23Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System23Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.006460">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System23Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System23Test.php" line="12" assertions="2" time="0.003554"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System23Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System23Test.php" line="22" assertions="2" time="0.002906"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System24Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System24Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="6" failures="0" errors="0" time="0.010486">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System24Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System24Test.php" line="12" assertions="4" time="0.006954"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System24Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System24Test.php" line="22" assertions="2" time="0.003532"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System25Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System25Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="3" failures="0" errors="0" time="0.006096">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System25Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System25Test.php" line="12" assertions="1" time="0.002741"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System25Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System25Test.php" line="22" assertions="2" time="0.003355"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System26Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System26Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="5" failures="0" errors="0" time="0.007856">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System26Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System26Test.php" line="12" assertions="3" time="0.004813"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System26Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System26Test.php" line="22" assertions="2" time="0.003043"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System28Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System28Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.006643">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System28Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System28Test.php" line="12" assertions="2" time="0.003634"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System28Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System28Test.php" line="22" assertions="2" time="0.003009"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System29Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System29Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="3" failures="0" errors="0" time="0.007953">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System29Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System29Test.php" line="12" assertions="1" time="0.003791"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System29Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System29Test.php" line="22" assertions="2" time="0.004162"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System30Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System30Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.007347">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System30Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System30Test.php" line="12" assertions="2" time="0.003987"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System30Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System30Test.php" line="22" assertions="2" time="0.003360"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System31Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System31Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.007092">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System31Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System31Test.php" line="12" assertions="2" time="0.003989"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System31Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System31Test.php" line="22" assertions="2" time="0.003103"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System32Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System32Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="8" failures="0" errors="0" time="0.009801">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System32Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System32Test.php" line="12" assertions="6" time="0.006931"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System32Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System32Test.php" line="22" assertions="2" time="0.002870"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System33Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System33Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.006110">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System33Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System33Test.php" line="12" assertions="2" time="0.003376"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System33Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System33Test.php" line="22" assertions="2" time="0.002734"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System34Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System34Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.006447">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System34Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System34Test.php" line="12" assertions="2" time="0.003524"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System34Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System34Test.php" line="22" assertions="2" time="0.002923"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System35Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System35Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="8" failures="0" errors="0" time="0.012021">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System35Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System35Test.php" line="12" assertions="6" time="0.008731"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System35Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System35Test.php" line="22" assertions="2" time="0.003290"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System36Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System36Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.005731">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System36Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System36Test.php" line="12" assertions="2" time="0.003167"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System36Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System36Test.php" line="22" assertions="2" time="0.002564"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System37Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System37Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.006141">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System37Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System37Test.php" line="12" assertions="2" time="0.003377"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System37Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System37Test.php" line="22" assertions="2" time="0.002764"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System38Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System38Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.006243">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System38Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System38Test.php" line="12" assertions="2" time="0.003491"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System38Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System38Test.php" line="22" assertions="2" time="0.002752"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System39Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System39Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.006589">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System39Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System39Test.php" line="12" assertions="2" time="0.003656"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System39Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System39Test.php" line="22" assertions="2" time="0.002933"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System40Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System40Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.007267">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System40Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System40Test.php" line="12" assertions="2" time="0.003937"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System40Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System40Test.php" line="22" assertions="2" time="0.003330"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System41Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System41Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="8" failures="0" errors="0" time="0.013844">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System41Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System41Test.php" line="12" assertions="6" time="0.010101"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System41Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System41Test.php" line="22" assertions="2" time="0.003743"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System42Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System42Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.006898">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System42Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System42Test.php" line="12" assertions="2" time="0.003697"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System42Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System42Test.php" line="22" assertions="2" time="0.003201"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System43Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System43Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.007139">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System43Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System43Test.php" line="12" assertions="2" time="0.003839"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System43Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System43Test.php" line="22" assertions="2" time="0.003300"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System44Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System44Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.006063">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System44Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System44Test.php" line="12" assertions="2" time="0.003289"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System44Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System44Test.php" line="22" assertions="2" time="0.002774"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System45Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System45Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="6" failures="0" errors="0" time="0.011921">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System45Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System45Test.php" line="12" assertions="4" time="0.007961"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System45Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System45Test.php" line="22" assertions="2" time="0.003960"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System46Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System46Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="5" failures="0" errors="0" time="0.007089">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System46Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System46Test.php" line="12" assertions="3" time="0.004341"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System46Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System46Test.php" line="22" assertions="2" time="0.002748"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System47Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System47Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.006212">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System47Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System47Test.php" line="12" assertions="2" time="0.003439"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System47Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System47Test.php" line="22" assertions="2" time="0.002773"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System48Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System48Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.006605">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System48Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System48Test.php" line="12" assertions="2" time="0.003552"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System48Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System48Test.php" line="22" assertions="2" time="0.003053"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System49Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System49Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="5" failures="0" errors="0" time="0.015609">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System49Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System49Test.php" line="12" assertions="3" time="0.008628"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System49Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System49Test.php" line="22" assertions="2" time="0.006981"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System50Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System50Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.007505">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System50Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System50Test.php" line="12" assertions="2" time="0.003663"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System50Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System50Test.php" line="22" assertions="2" time="0.003842"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System51Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System51Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="7" failures="0" errors="0" time="0.019859">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System51Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System51Test.php" line="12" assertions="5" time="0.013112"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System51Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System51Test.php" line="22" assertions="2" time="0.006747"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System54Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System54Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.006594">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System54Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System54Test.php" line="12" assertions="2" time="0.003736"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System54Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System54Test.php" line="22" assertions="2" time="0.002858"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System55Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System55Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.007221">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System55Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System55Test.php" line="12" assertions="2" time="0.003872"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System55Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System55Test.php" line="22" assertions="2" time="0.003349"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System56Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System56Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.007174">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System56Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System56Test.php" line="12" assertions="2" time="0.003837"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System56Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System56Test.php" line="22" assertions="2" time="0.003337"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System57Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System57Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="13" failures="0" errors="0" time="0.027258">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System57Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System57Test.php" line="12" assertions="11" time="0.021758"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System57Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System57Test.php" line="25" assertions="2" time="0.005500"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System58Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System58Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="6" failures="0" errors="0" time="0.008211">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System58Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System58Test.php" line="12" assertions="4" time="0.005366"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System58Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System58Test.php" line="22" assertions="2" time="0.002845"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System59Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System59Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.007584">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System59Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System59Test.php" line="12" assertions="2" time="0.003458"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System59Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System59Test.php" line="22" assertions="2" time="0.004126"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System60Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System60Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.007972">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System60Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System60Test.php" line="12" assertions="2" time="0.004298"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System60Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System60Test.php" line="22" assertions="2" time="0.003674"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System61Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System61Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.008964">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System61Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System61Test.php" line="12" assertions="2" time="0.005096"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System61Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System61Test.php" line="22" assertions="2" time="0.003868"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System62Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System62Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="3" failures="0" errors="0" time="0.005756">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System62Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System62Test.php" line="12" assertions="1" time="0.002652"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System62Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System62Test.php" line="22" assertions="2" time="0.003104"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System63Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System63Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.008697">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System63Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System63Test.php" line="12" assertions="2" time="0.005279"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System63Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System63Test.php" line="22" assertions="2" time="0.003418"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System64Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System64Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.006534">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System64Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System64Test.php" line="12" assertions="2" time="0.003612"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System64Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System64Test.php" line="22" assertions="2" time="0.002922"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System65Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System65Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.008416">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System65Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System65Test.php" line="12" assertions="2" time="0.004753"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System65Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System65Test.php" line="22" assertions="2" time="0.003663"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System66Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System66Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="6" failures="0" errors="0" time="0.009232">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System66Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System66Test.php" line="12" assertions="4" time="0.006082"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System66Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System66Test.php" line="22" assertions="2" time="0.003150"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System67Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System67Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.008073">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System67Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System67Test.php" line="12" assertions="2" time="0.004462"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System67Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System67Test.php" line="22" assertions="2" time="0.003611"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System68Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System68Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="3" failures="0" errors="0" time="0.010199">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System68Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System68Test.php" line="12" assertions="1" time="0.005297"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System68Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System68Test.php" line="22" assertions="2" time="0.004902"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System69Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System69Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.013613">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System69Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System69Test.php" line="12" assertions="2" time="0.006774"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System69Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System69Test.php" line="22" assertions="2" time="0.006839"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System71Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System71Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="3" failures="0" errors="0" time="0.005541">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System71Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System71Test.php" line="12" assertions="1" time="0.002565"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System71Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System71Test.php" line="22" assertions="2" time="0.002976"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System73Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System73Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="6" failures="0" errors="0" time="0.022541">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System73Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System73Test.php" line="12" assertions="4" time="0.013471"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System73Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System73Test.php" line="22" assertions="2" time="0.009070"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System74Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System74Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="5" failures="0" errors="0" time="0.011051">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System74Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System74Test.php" line="12" assertions="3" time="0.006713"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System74Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System74Test.php" line="22" assertions="2" time="0.004338"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System76Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System76Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="5" failures="0" errors="0" time="0.007809">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System76Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System76Test.php" line="12" assertions="3" time="0.004801"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System76Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System76Test.php" line="22" assertions="2" time="0.003008"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System77Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System77Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="6" failures="0" errors="0" time="0.015178">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System77Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System77Test.php" line="12" assertions="4" time="0.010171"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System77Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System77Test.php" line="22" assertions="2" time="0.005007"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System78Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System78Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.007806">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System78Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System78Test.php" line="12" assertions="2" time="0.005017"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System78Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System78Test.php" line="22" assertions="2" time="0.002789"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System79Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System79Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="5" failures="0" errors="0" time="0.009768">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System79Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System79Test.php" line="12" assertions="3" time="0.007796"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System79Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System79Test.php" line="22" assertions="2" time="0.001972"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System80Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System80Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.013069">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System80Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System80Test.php" line="12" assertions="2" time="0.006330"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System80Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System80Test.php" line="22" assertions="2" time="0.006739"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System81Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System81Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.008170">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System81Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System81Test.php" line="12" assertions="2" time="0.004174"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System81Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System81Test.php" line="22" assertions="2" time="0.003996"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System82Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System82Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.007849">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System82Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System82Test.php" line="12" assertions="2" time="0.004376"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System82Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System82Test.php" line="22" assertions="2" time="0.003473"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System83Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System83Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="6" failures="0" errors="0" time="0.018353">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System83Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System83Test.php" line="12" assertions="4" time="0.010897"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System83Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System83Test.php" line="22" assertions="2" time="0.007456"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System84Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System84Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.011648">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System84Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System84Test.php" line="12" assertions="2" time="0.005984"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System84Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System84Test.php" line="22" assertions="2" time="0.005664"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System85Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System85Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="6" failures="0" errors="0" time="0.018514">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System85Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System85Test.php" line="12" assertions="4" time="0.010701"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System85Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System85Test.php" line="22" assertions="2" time="0.007813"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System86Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System86Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="6" failures="0" errors="0" time="0.018312">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System86Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System86Test.php" line="12" assertions="4" time="0.011463"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System86Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System86Test.php" line="22" assertions="2" time="0.006849"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System87Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System87Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="8" failures="0" errors="0" time="0.019064">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System87Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System87Test.php" line="12" assertions="6" time="0.012265"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System87Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System87Test.php" line="22" assertions="2" time="0.006799"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System88Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System88Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="5" failures="0" errors="0" time="0.008212">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System88Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System88Test.php" line="12" assertions="3" time="0.005073"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System88Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System88Test.php" line="22" assertions="2" time="0.003139"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System89Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System89Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="5" failures="0" errors="0" time="0.009872">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System89Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System89Test.php" line="12" assertions="3" time="0.006092"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System89Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System89Test.php" line="22" assertions="2" time="0.003780"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System90Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System90Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="10" failures="0" errors="0" time="0.041064">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System90Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System90Test.php" line="12" assertions="8" time="0.029490"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System90Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System90Test.php" line="22" assertions="2" time="0.011574"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System91Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System91Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="8" failures="0" errors="0" time="0.028253">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System91Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System91Test.php" line="12" assertions="6" time="0.017574"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System91Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System91Test.php" line="22" assertions="2" time="0.010679"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System92Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System92Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.006525">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System92Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System92Test.php" line="12" assertions="2" time="0.003550"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System92Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System92Test.php" line="22" assertions="2" time="0.002975"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System93Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System93Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="5" failures="0" errors="0" time="0.012566">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System93Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System93Test.php" line="12" assertions="3" time="0.006856"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System93Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System93Test.php" line="22" assertions="2" time="0.005710"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System94Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System94Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="3" failures="0" errors="0" time="0.008083">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System94Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System94Test.php" line="12" assertions="1" time="0.003756"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System94Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System94Test.php" line="22" assertions="2" time="0.004327"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System95Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System95Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="5" failures="0" errors="0" time="0.009497">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System95Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System95Test.php" line="12" assertions="3" time="0.005619"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System95Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System95Test.php" line="22" assertions="2" time="0.003878"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System96Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System96Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="6" failures="0" errors="0" time="0.020425">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System96Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System96Test.php" line="12" assertions="4" time="0.013031"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System96Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System96Test.php" line="22" assertions="2" time="0.007394"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System97Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System97Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="3" failures="0" errors="0" time="0.003706">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System97Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System97Test.php" line="12" assertions="1" time="0.002022"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System97Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System97Test.php" line="22" assertions="2" time="0.001684"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System98Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System98Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.010111">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System98Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System98Test.php" line="12" assertions="2" time="0.004521"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System98Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System98Test.php" line="22" assertions="2" time="0.005590"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\System99Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System99Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="5" failures="0" errors="0" time="0.008779">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\System99Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System99Test.php" line="12" assertions="3" time="0.005298"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\System99Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/System99Test.php" line="22" assertions="2" time="0.003481"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemA0Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemA0Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="7" failures="0" errors="0" time="0.011482">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemA0Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemA0Test.php" line="12" assertions="5" time="0.008168"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemA0Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemA0Test.php" line="22" assertions="2" time="0.003314"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemA1Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemA1Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="5" failures="0" errors="0" time="0.010986">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemA1Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemA1Test.php" line="12" assertions="3" time="0.006694"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemA1Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemA1Test.php" line="22" assertions="2" time="0.004292"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemA2Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemA2Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="6" failures="0" errors="0" time="0.018962">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemA2Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemA2Test.php" line="12" assertions="4" time="0.011384"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemA2Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemA2Test.php" line="22" assertions="2" time="0.007578"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemA3Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemA3Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="6" failures="0" errors="0" time="0.019640">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemA3Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemA3Test.php" line="12" assertions="4" time="0.012128"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemA3Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemA3Test.php" line="22" assertions="2" time="0.007512"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemA4Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemA4Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="6" failures="0" errors="0" time="0.022528">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemA4Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemA4Test.php" line="12" assertions="4" time="0.011900"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemA4Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemA4Test.php" line="22" assertions="2" time="0.010628"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemA5Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemA5Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.014208">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemA5Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemA5Test.php" line="12" assertions="2" time="0.006995"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemA5Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemA5Test.php" line="22" assertions="2" time="0.007213"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemA6Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemA6Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="5" failures="0" errors="0" time="0.011554">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemA6Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemA6Test.php" line="12" assertions="3" time="0.006890"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemA6Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemA6Test.php" line="22" assertions="2" time="0.004664"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemA7Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemA7Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.014022">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemA7Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemA7Test.php" line="12" assertions="2" time="0.006871"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemA7Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemA7Test.php" line="22" assertions="2" time="0.007151"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemA8Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemA8Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="5" failures="0" errors="0" time="0.016111">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemA8Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemA8Test.php" line="12" assertions="3" time="0.009215"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemA8Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemA8Test.php" line="22" assertions="2" time="0.006896"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemA9Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemA9Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="5" failures="0" errors="0" time="0.014215">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemA9Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemA9Test.php" line="12" assertions="3" time="0.007812"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemA9Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemA9Test.php" line="22" assertions="2" time="0.006403"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemB0Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemB0Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.005907">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemB0Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemB0Test.php" line="12" assertions="2" time="0.003918"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemB0Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemB0Test.php" line="22" assertions="2" time="0.001989"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemB1Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemB1Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="6" failures="0" errors="0" time="0.017418">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemB1Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemB1Test.php" line="12" assertions="4" time="0.010898"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemB1Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemB1Test.php" line="22" assertions="2" time="0.006520"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemB2Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemB2Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="6" failures="0" errors="0" time="0.013129">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemB2Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemB2Test.php" line="12" assertions="4" time="0.008966"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemB2Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemB2Test.php" line="22" assertions="2" time="0.004163"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemB3Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemB3Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.008269">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemB3Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemB3Test.php" line="12" assertions="2" time="0.004547"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemB3Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemB3Test.php" line="22" assertions="2" time="0.003722"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemB4Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemB4Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="6" failures="0" errors="0" time="0.013295">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemB4Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemB4Test.php" line="12" assertions="4" time="0.009006"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemB4Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemB4Test.php" line="22" assertions="2" time="0.004289"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemB5Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemB5Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="6" failures="0" errors="0" time="0.018779">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemB5Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemB5Test.php" line="12" assertions="4" time="0.011615"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemB5Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemB5Test.php" line="22" assertions="2" time="0.007164"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemB6Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemB6Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="5" failures="1" errors="0" time="0.019496">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemB6Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemB6Test.php" line="17" assertions="3" time="0.009290"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemB6Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemB6Test.php" line="28" assertions="2" time="0.010206">
+        <failure type="PHPUnit_Framework_ExpectationFailedException">Bav\Validator\De\SystemB6Test::testWithInvalidAccountReturnsFalse
+Failed asserting that true is false.
+
+/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemB6Test.php:35
+/usr/bin/phpunit:46
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemB7Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemB7Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="5" failures="0" errors="0" time="0.009501">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemB7Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemB7Test.php" line="12" assertions="3" time="0.005819"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemB7Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemB7Test.php" line="22" assertions="2" time="0.003682"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemB8Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemB8Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="8" failures="0" errors="0" time="0.026979">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemB8Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemB8Test.php" line="12" assertions="6" time="0.019099"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemB8Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemB8Test.php" line="22" assertions="2" time="0.007880"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemB9Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemB9Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="6" failures="0" errors="0" time="0.012235">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemB9Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemB9Test.php" line="12" assertions="4" time="0.009060"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemB9Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemB9Test.php" line="22" assertions="2" time="0.003175"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemC0Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemC0Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="5" failures="1" errors="0" time="0.019123">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemC0Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemC0Test.php" line="12" assertions="4" time="0.013473"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemC0Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemC0Test.php" line="23" assertions="1" time="0.005650">
+        <failure type="PHPUnit_Framework_ExpectationFailedException">Bav\Validator\De\SystemC0Test::testWithInvalidAccountReturnsFalse
+Failed asserting that true is false.
+
+/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemC0Test.php:30
+/usr/bin/phpunit:46
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemC1Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemC1Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="7" failures="0" errors="0" time="0.015634">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemC1Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemC1Test.php" line="12" assertions="4" time="0.009365"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemC1Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemC1Test.php" line="22" assertions="3" time="0.006269"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemC2Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemC2Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="6" failures="0" errors="0" time="0.019156">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemC2Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemC2Test.php" line="12" assertions="4" time="0.011509"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemC2Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemC2Test.php" line="22" assertions="2" time="0.007647"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemC3Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemC3Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="9" failures="0" errors="0" time="0.018739">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemC3Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemC3Test.php" line="12" assertions="5" time="0.010808"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemC3Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemC3Test.php" line="22" assertions="4" time="0.007931"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemC4Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemC4Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="7" failures="0" errors="0" time="0.012437">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemC4Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemC4Test.php" line="12" assertions="4" time="0.007508"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemC4Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemC4Test.php" line="22" assertions="3" time="0.004929"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemC5Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemC5Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="7" failures="0" errors="0" time="0.016624">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemC5Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemC5Test.php" line="12" assertions="5" time="0.011707"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemC5Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemC5Test.php" line="22" assertions="2" time="0.004917"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemC6Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemC6Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="5" failures="0" errors="0" time="0.016171">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemC6Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemC6Test.php" line="12" assertions="3" time="0.009719"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemC6Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemC6Test.php" line="22" assertions="2" time="0.006452"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemC7Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemC7Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="5" failures="0" errors="0" time="0.015745">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemC7Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemC7Test.php" line="12" assertions="3" time="0.009156"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemC7Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemC7Test.php" line="22" assertions="2" time="0.006589"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemC8Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemC8Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="5" failures="0" errors="0" time="0.021121">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemC8Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemC8Test.php" line="12" assertions="3" time="0.011406"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemC8Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemC8Test.php" line="22" assertions="2" time="0.009715"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemC9Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemC9Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="5" failures="0" errors="0" time="0.016532">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemC9Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemC9Test.php" line="12" assertions="3" time="0.008981"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemC9Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemC9Test.php" line="22" assertions="2" time="0.007551"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemD0Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemD0Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="5" failures="0" errors="0" time="0.009162">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemD0Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemD0Test.php" line="12" assertions="3" time="0.005312"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemD0Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemD0Test.php" line="22" assertions="2" time="0.003850"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemD1Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemD1Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="5" failures="0" errors="0" time="0.017201">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemD1Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemD1Test.php" line="12" assertions="2" time="0.007626"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemD1Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemD1Test.php" line="22" assertions="3" time="0.009575"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemD2Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemD2Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="5" failures="0" errors="0" time="0.029669">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemD2Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemD2Test.php" line="12" assertions="3" time="0.014431"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemD2Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemD2Test.php" line="22" assertions="2" time="0.015238"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemD3Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemD3Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.016548">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemD3Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemD3Test.php" line="12" assertions="2" time="0.008374"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemD3Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemD3Test.php" line="22" assertions="2" time="0.008174"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemD4Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemD4Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.011423">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemD4Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemD4Test.php" line="12" assertions="2" time="0.007197"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemD4Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemD4Test.php" line="22" assertions="2" time="0.004226"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemD5Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemD5Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="7" failures="0" errors="0" time="0.026502">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemD5Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemD5Test.php" line="12" assertions="4" time="0.014277"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemD5Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemD5Test.php" line="22" assertions="3" time="0.012225"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemD6Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemD6Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="7" failures="0" errors="0" time="0.026587">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemD6Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemD6Test.php" line="12" assertions="4" time="0.012235"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemD6Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemD6Test.php" line="22" assertions="3" time="0.014352"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemD7Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemD7Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="4" failures="0" errors="0" time="0.009522">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemD7Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemD7Test.php" line="12" assertions="2" time="0.005090"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemD7Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemD7Test.php" line="22" assertions="2" time="0.004432"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemD8Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemD8Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="5" failures="0" errors="0" time="0.008117">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemD8Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemD8Test.php" line="12" assertions="3" time="0.004681"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemD8Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemD8Test.php" line="22" assertions="2" time="0.003436"/>
+    </testsuite>
+    <testsuite name="Bav\Validator\De\SystemD9Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemD9Test.php" namespace="Bav\Validator\De" fullPackage="Bav.Validator.De" tests="2" assertions="6" failures="0" errors="0" time="0.023446">
+      <testcase name="testWithValidAccountReturnsTrue" class="Bav\Validator\De\SystemD9Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemD9Test.php" line="12" assertions="4" time="0.013709"/>
+      <testcase name="testWithInvalidAccountReturnsFalse" class="Bav\Validator\De\SystemD9Test" file="/Users/steffen/www_root/tmp_github/bav/tests/library/Bav/Validator/De/SystemD9Test.php" line="22" assertions="2" time="0.009737"/>
+    </testsuite>
   </testsuite>
 </testsuites>
